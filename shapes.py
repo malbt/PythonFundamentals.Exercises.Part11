@@ -17,13 +17,3 @@ class Square(Rectangle):
         super(). __init__(length, length)
 
 
-rect = Rectangle(2, 4)
-print(rect.area())
-# 8
-
-square = Square(8)
-print(square.area())
-# 64
-
-print(square.perimeter())
-# 32
