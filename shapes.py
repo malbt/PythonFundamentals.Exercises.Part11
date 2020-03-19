@@ -1,9 +1,6 @@
-# Exercise 1
-
-
 class Rectangle:
 
-    def __init__(self, length, width):
+    def __init__(self, length: int, width: int):
         self.length = length
         self.width = width
 
@@ -14,17 +11,19 @@ class Rectangle:
         return 2 * (self.length + self.width)
 
 
-class Square:
+class Square(Rectangle):
 
-    def __init__(self):
-        self.Rectangle = rectangle()
+    def __init__(self, length):
+        super(). __init__(length, length)
 
-    import shapes
-    rect = shapes.Rectangle(2, 4)
-    rect.area()
-    # line 27 AttributeError: partially initialized module 'shapes' has no attribute 'Square' (most likely due to a
-    # circular import)
-    square = shapes.Square(8)
-    square.area()
 
-    square.perimeter()
+rect = Rectangle(2, 4)
+print(rect.area())
+# 8
+
+square = Square(8)
+print(square.area())
+# 64
+
+print(square.perimeter())
+# 32
